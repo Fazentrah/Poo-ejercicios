@@ -1,15 +1,24 @@
-class Persona {
-    constructor(nombre, edad) {
-        this.nombre = nombre;
-        this.edad = edad;
+class Auto {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidad = 0;
     }
 
 
-    saludar() {
-        console.log("Hola, soy " + this.nombre);
+    acelerar() {
+        this.velocidad += 10;
+    }
+
+
+    frenar() {
+        this.velocidad -= 10;
     }
 }
 
 
-const persona1 = new Persona("Ana", 25);
-persona1.saludar();
+const miAuto = new Auto("Ford", "Fiesta");
+
+
+miAuto.acelerar();
+console.log(miAuto.velocidad);
